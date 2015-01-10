@@ -1,0 +1,5 @@
+1. Put 'if' tests outside of methods.
+2. Simplify reroll to be as simple as 'build_weapon(...)'.
+
+
+reroll: Embed a reroll method with the same weapons method inside of the weapons method.
