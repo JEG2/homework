@@ -1,8 +1,8 @@
-def relationships_category
-  File.open("data_fiasco", "r") do |file|
+def category 
+  File.open("relationship_categories", "r") do |file|
     while (line = file.gets)
       if line.include?("Relationship")
-        (rand(1..6) - 1).times do
+        rand(0..5).times do
           file.gets
         end
         return file.gets
@@ -11,11 +11,11 @@ def relationships_category
   end
 end
 
-def relationships_subcategory(relationship)
-  File.open("data_fiasco", "r") do |file|
+def subcategory(relationship_category)
+  File.open("relationship_subcategories", "r") do |file|
     while (line = file.gets)
-      if line.include?("--#{relationship}")
-        (rand(1..6) - 1).times do
+      if line.include?("#{relationship_category}")
+        rand(0..4).times do
           file.gets
         end
         return file.gets
@@ -24,6 +24,7 @@ def relationships_subcategory(relationship)
   end
 end
 
-relationship = relationships_category
-puts relationship
-puts relationships_subcategory(relationship)
+relationship_category = category
+puts relationship_category
+relationship_subcategory = subcategory(relationship_category)
+puts relationship_subcategory
