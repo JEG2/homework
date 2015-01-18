@@ -1,30 +1,31 @@
-def category 
-  File.open("relationship_categories", "r") do |file|
-    while (line = file.gets)
-      if line.include?("Relationship")
-        rand(0..5).times do
-          file.gets
+class Pull_file
+  def initialize(file_name1, file_name2)
+    @file_name1 = file_name1
+    @file_name2 = file_name2
+  end
+
+  def build_categories
+    array = Array.new
+    File.open(@file_name1, "r") { |file| file.each_line { |line| array << line.strip } }
+    return array
+  end
+
+  def build_subcategories
+    keys      = build_categories
+    hash      = Hash.new
+    keys.each { |i| File.open(@file_name2, "r") do |file|
+      while (line = file.gets)
+        if line.include?(i)
+          hash[i] = [file.gets.strip, file.gets.strip, file.gets.strip, file.gets.strip, file.gets.strip, file.gets.strip]
         end
-        return file.gets
       end
     end
+    }
+    return hash
   end
+
 end
 
-def subcategory(relationship_category)
-  File.open("relationship_subcategories", "r") do |file|
-    while (line = file.gets)
-      if line.include?("#{relationship_category}")
-        rand(0..4).times do
-          file.gets
-        end
-        return file.gets
-      end
-    end
-  end
-end
-
-relationship_category = category
-puts relationship_category
-relationship_subcategory = subcategory(relationship_category)
-puts relationship_subcategory
+relationships = Pull_file.new("relationship_categories", "relationship_subcategories")
+p relationships.build_categories
+p relationships.build_subcategories
