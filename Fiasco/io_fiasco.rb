@@ -1,19 +1,24 @@
 class Tables
-  def initialize(file_name1, file_name2)
-    @file_name1 = file_name1
-    @file_name2 = file_name2
+  def initialize(file_name)
+    @file_name = file_name
   end
 
   def build_categories
     array = Array.new
-    File.open(@file_name1, "r") { |file| file.each_line { |line| array << line.strip } }
+    File.open(@file_name, "r") do |file|
+      while (line = file.gets)
+        if line.include?("--marker")
+          array << file.gets.strip
+        end
+      end
+    end
     return array
   end
 
   def run
     keys      = build_categories
     hash      = Hash.new
-    keys.each { |i| File.open(@file_name2, "r") do |file|
+    keys.each { |i| File.open(@file_name, "r") do |file|
       while (line = file.gets)
         if line.include?(i)
           hash[i] = [file.gets.strip, file.gets.strip, file.gets.strip, file.gets.strip, file.gets.strip, file.gets.strip]
@@ -25,13 +30,13 @@ class Tables
   end
 end
 
-relationships = Tables.new("relationship_categories", "relationship_subcategories").run
+relationships = Tables.new("relationships").run
 
-needs         = Tables.new("needs_categories", "needs_subcategories").run
+needs         = Tables.new("needs").run
 
-objects       = Tables.new("object_categories", "object_subcategories").run
+objects       = Tables.new("objects").run
 
-locations     = Tables.new("location_categories", "location_subcategories").run
+locations     = Tables.new("locations").run
 
 class Runner
   def initialize(relationships, needs, locations, objects)
