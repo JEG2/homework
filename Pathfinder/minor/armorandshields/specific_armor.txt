@@ -1,4 +1,3 @@
-  "Specific armor" => {
-  1..50 => "Mithral shirt",
-  51..80 => "Dragonhide plate",
-  81..100 => "Elven chain"
+  1..50 => Mithral shirt
+  51..80 => Dragonhide plate
+  81..100 => Elven chain

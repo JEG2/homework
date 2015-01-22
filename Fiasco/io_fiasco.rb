@@ -1,42 +1,28 @@
-class Tables
+class Table
   def initialize(file_name)
     @file_name = file_name
   end
 
-  def build_categories
-    array = Array.new
+  def run
+    hash = Hash.new
     File.open(@file_name, "r") do |file|
       while (line = file.gets)
         if line.include?("--marker")
-          array << file.gets.strip
+          hash[file.gets.strip] = Array.new(6) { file.gets.strip }
         end
       end
     end
-    return array
-  end
-
-  def run
-    keys      = build_categories
-    hash      = Hash.new
-    keys.each { |i| File.open(@file_name, "r") do |file|
-      while (line = file.gets)
-        if line.include?(i)
-          hash[i] = [file.gets.strip, file.gets.strip, file.gets.strip, file.gets.strip, file.gets.strip, file.gets.strip]
-        end
-      end
-    end
-    }
     return hash
   end
 end
 
-relationships = Tables.new("relationships").run
+relationships = Table.new("relationships").run
 
-needs         = Tables.new("needs").run
+needs         = Table.new("needs").run
 
-objects       = Tables.new("objects").run
+objects       = Table.new("objects").run
 
-locations     = Tables.new("locations").run
+locations     = Table.new("locations").run
 
 class Runner
   def initialize(relationships, needs, locations, objects)
