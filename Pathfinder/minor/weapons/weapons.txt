@@ -1,5 +1,4 @@
-  "Weapons" => {
-  1..70 => "+1",
-  71..85 => "+2",
-  86..90 => "Specific weapon",
-  91..100 => "Special weapon ability and roll again"
+  1..70 => +1
+  71..85 => +2
+  86..90 => Specific weapon
+  91..100 => Special weapon ability and roll again
