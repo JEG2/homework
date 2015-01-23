@@ -1,28 +1,42 @@
+
     1..5 
     Glamered
+
     6..8 
     Fortification, light
+
     9..11 
     Slick
+
     12..17 
     Shadow
+
     18..19 
     Spell resistance (13)
+
     20..29 
     Slick, improved
+
     30..49 
     Shadow, improved
+
     50..74 
     Energy resistance
+
     75..79 
     Ghost touch
+
     80..84 
     Invulnerability
+
     85..89 
     Fortification, moderate
+
     90..94 
     Spell resistance (15)
+
     95..99 
     Wild
+
     100..100 
     Roll again twice

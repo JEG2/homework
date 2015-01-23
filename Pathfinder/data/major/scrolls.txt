@@ -1,12 +1,18 @@
+
    1..5 
    4th Level
+
    6..50 
    5th Level
+
    51..70 
    6th Level
+
    71..85 
    7th Level
+
    86..95 
    8th Level
+
    96..100 
    9th Level

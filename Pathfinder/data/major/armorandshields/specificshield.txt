@@ -1,10 +1,15 @@
+
     1..20 
     Caster’s shield
+
     21..40 
     Spined shield
+
     41..60 
     Lion’s shield
+
     61..90 
     Winged shield
+
     91..100 
     Absorbing shield

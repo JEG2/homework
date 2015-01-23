@@ -1,16 +1,24 @@
+
     1..15 
     Charming
+
     16..30 
     Fire
+
     31..40 
     Swarming insects
+
     41..55 
     Size alteration
+
     56..75 
     Healing
+
     76..90 
     Frost
+
     91..95 
     Illumination
+
     96..100 
     Defense
