@@ -1,0 +1,18 @@
+    1..10 
+    Armor and shields
+    11..20 
+    Weapons
+    21..25 
+    Potions
+    26..35 
+    Rings
+    36..45 
+    Rods
+    46..55 
+    Scrolls
+    56..75 
+    Staves
+    76..80 
+    Wands
+    81..100 
+    Wondrous item

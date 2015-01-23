@@ -1,3 +1,0 @@
-  1..20 => 0 Level
-  21..60 => 1st Level
-  61..100 => 2nd Level

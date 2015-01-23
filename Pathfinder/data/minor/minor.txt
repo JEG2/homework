@@ -1,0 +1,14 @@
+  1..4 
+  Armor and shields
+  5..9 
+  Weapons
+  10..44 
+  Potions
+  45..46 
+  Rings
+  47..81 
+  Scrolls
+  82..91 
+  Wands
+  92..100 
+  Wondrous items
