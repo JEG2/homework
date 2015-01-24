@@ -69,9 +69,13 @@ class Runner
     end
   end
 
-  def build_items
+  def build_items(option)
     cycles = 0
-    count = rand(@count)
+    if option == "random"
+      count = rand(@count)
+    else
+      count = @count
+    end
     while cycles < count
       build_item
       cycles = cycles + 1
@@ -179,12 +183,11 @@ def set_selection(selection)
   puts
   puts "Choose:"
   selection = gets.strip
-  if ["default", "parameters"].include?(selection)
-    return selection
-  else
+  if !["default", "parameters"].include?(selection)
     puts "Oops! Please try again."
     set_selection(selection)
   end
+  return selection
 end
 
 def set_parameters(parameters)
@@ -193,9 +196,8 @@ def set_parameters(parameters)
   medium
   major"
   puts
-  paramaters = Array.new(4)
+  parameters = Array.new(4)
   parameters[0] = gets.strip
-  p parameters
 
   if !["minor", "medium", "major"].include?(parameters[0])  
     puts "Oops! Please try again."
@@ -224,14 +226,33 @@ end
 
 selection = set_selection(selection)
 if selection == "default"
-  run_minor   = Runner.new(3..12, minor).build_items
-  run_medium  = Runner.new(2..8, medium).build_items   
-  run_major   = Runner.new(1..4, major).build_items
+  option = "random" 
+  run_minor   = Runner.new(3..12, minor).build_items(option)
+  run_medium  = Runner.new(2..8, medium).build_items(option)
+  run_major   = Runner.new(1..4, major).build_items(option)
 else
   parameters = set_parameters(parameters)
   if parameters[1] == "range"
-    run_program = Runner.new(parameters[2]..parameters[3], parameters[0].to_sym).build_items
+    option = "random"
+    lower_bound = parameters[2].to_i
+    upper_bound = parameters[3].to_i
+    case parameters[0]
+    when "minor"
+      run_program = Runner.new(lower_bound..upper_bound, minor).build_items(option)
+    when "medium"
+      run_program = Runner.new(lower_bound..upper_bound, medium).build_items(option)
+    when "major"
+      run_program = Runner.new(lower_bound..upper_bound, major).build_items(option)
+    end
   else
-    run_program = Runner.new(parameters[2], parameters[0].to_sym)
+    option = "fixed"
+    case parameters[0]
+    when "minor"
+      run_program = Runner.new(parameters[2].to_i, minor).build_items(option)
+    when "medium"
+      run_program = Runner.new(parameters[2].to_i, medium).build_items(option)
+    when "major"
+      run_program = Runner.new(parameters[2].to_i, major).build_items(option)
+    end
   end
 end
