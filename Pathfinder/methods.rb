@@ -1197,4 +1197,3 @@ end
 build_items(rand(3..12), minor_tables)
 build_items(rand(2..8), med_tables)
 build_items(rand(1..4), major_tables)
-
