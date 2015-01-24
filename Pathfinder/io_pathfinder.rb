@@ -197,8 +197,7 @@ def set_parameters(parameters)
   parameters[0] = gets.strip
   p parameters
 
-  if ["minor", "medium", "major"].include?(parameters[0])  
-  else
+  if !["minor", "medium", "major"].include?(parameters[0])  
     puts "Oops! Please try again."
     set_parameters(parameters)
   end
@@ -207,8 +206,7 @@ def set_parameters(parameters)
   number"
   puts
   parameters[1] = gets.strip
-  if parameters[1].include?("range" || "number")
-  else
+  if !["range", "number"].include?(parameters[1])
     puts "Oops! Please try again."
     set_parameters(parameters)
   end
