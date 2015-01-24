@@ -1,0 +1,52 @@
+
+    1
+    10 
+    Arrow catching
+
+    11
+    20 
+    Bashing
+
+    21
+    25 
+    Blinding
+
+    26
+    40 
+    Fortification, light
+
+    41
+    50 
+    Arrow deflection
+
+    51
+    57 
+    Animated
+
+    58
+    59 
+    Spell resistance (13)
+
+    60
+    79 
+    Energy resistance
+
+    80
+    85 
+    Ghost touch
+
+    86
+    95 
+    Fortification, moderate
+
+    96
+    98 
+    Spell resistance (15)
+
+    99
+    99 
+    Wild
+
+    100
+    100 
+    Roll again twice

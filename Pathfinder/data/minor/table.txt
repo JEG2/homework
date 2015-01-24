@@ -1,21 +1,28 @@
 
-  1..4 
+  1
+  4 
   Armor and shields
 
-  5..9 
+  5
+  9 
   Weapons
   
-  10..44 
+  10
+  44 
   Potions
 
-  45..46 
+  45
+  46 
   Rings
 
-  47..81 
+  47
+  81 
   Scrolls
 
-  82..91 
+  82
+  91 
   Wands
 
-  92..100 
+  92
+  100 
   Wondrous item

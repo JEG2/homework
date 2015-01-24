@@ -1,0 +1,32 @@
+
+  1
+  25 
+  Glamered
+
+  26
+  32
+  Fortification, light
+  
+  33
+  52 
+  Slick
+
+  53
+  92 
+  Shadow
+
+  93
+  96 
+  Spell resistance (13)
+  
+  97
+  97 
+  Slick, improved
+  
+  98
+  99 
+  Shadow, improved
+  
+  100
+  100 
+  Roll twice again

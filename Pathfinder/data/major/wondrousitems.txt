@@ -1,300 +1,400 @@
 
-    1..1 
+    1
+    1 
     Dimensional shackles
 
-    2..2 
+    2
+    2 
     Figurine of wondrous power, obsidian steed
 
-    3..3 
+    3
+    3 
     Drums of panic
 
-    4..4 
+    4
+    4 
     Ioun stone, orange prism
 
-    5..5 
+    5
+    5 
     Ioun stone, pale green prism
 
-    6..6 
+    6
+    6 
     Lantern of revealing
 
-    7..7 
+    7
+    7 
     Amulet of natural armor +4
 
-    8..8 
+    8
+    8 
     Amulet of proof against detection and locations
 
-    9..9 
+    9
+    9 
     Carpet of flying, 5 ft. by 10 ft.
 
-    10..10 
+    10
+    10 
     Golem manual, iron
 
-    11..11  
+    11
+    11  
     Belt of giant strength +6
 
-    12..12  
+    12
+    12  
     Belt of incredible dexterity +6
 
-    13..13  
+    13
+    13  
     Belt of mighty constitution +6
 
-    14..14  
+    14
+    14  
     Bracers of armor +6
 
-    15..15  
+    15
+    15  
     Headband of alluring charisma +6
 
-    16..16  
+    16
+    16  
     Headband of inspired wisdom +6
 
-    17..17  
+    17
+    17  
     Headband of vast intelligence +6
 
-    18..18  
+    18
+    18  
     Ioun stone, vibrant purple prism
 
-    19..19  
+    19
+    19  
     Pearl of power, 6th-level spell
 
-    20..20  
+    20
+    20  
     Scarab of protection
 
-    21..21  
+    21
+    21  
     Belt of physical might +4
 
-    22..22  
+    22
+    22  
     Headband of mental prowess +4
 
-    23..23  
+    23
+    23  
     Ioun stone, lavender and green ellipsoid
 
-    24..24  
+    24
+    24  
     Ring gates
 
-    25..25  
+    25
+    25  
     Crystal ball
 
-    26..26  
+    26
+    26  
     Golem manual, stone guardian
 
-    27..27  
+    27
+    27  
     Amulet of mighty fists +3
 
-    28..28  
+    28
+    28  
     Strand of prayer beads
 
-    29..29  
+    29
+    29  
     Orb of storms
 
-    30..30  
+    30
+    30  
     Boots of teleportation
 
-    31..31  
+    31
+    31  
     Bracers of armor +7
 
-    32..32 
+    32
+    32 
     Pearl of power, 7th-level spell
 
-    33..33 
+    33
+    33 
     Amulet of natural armor +5
 
-    34..34  
+    34
+    34  
     Cloak of displacement, major
 
-    35..35  
+    35
+    35  
     Crystal ball with see invisibility
 
-    36..36  
+    36
+    36  
     Horn of Valhalla
 
-    37..37  
+    37
+    37  
     Crystal ball with detect thoughts
 
-    38..38  
+    38
+    38  
     Wings of flying
 
-    39..39  
+    39
+    39  
     Cloak of etherealness
 
-    40..40  
+    40
+    40  
     Instant fortress
 
-    41..41  
+    41
+    41  
     Manual of bodily health +2
 
-    42..42  
+    42
+    42  
     Manual of gainful exercise +2
 
-    43..43  
+    43
+    43  
     Manual of quickness in action +2
 
-    44..44  
+    44
+    44  
     Tome of clear thought +2
 
-    45..45  
+    45
+    45  
     Tome of leadership and influence +2
 
-    46..46  
+    46
+    46  
     Tome of understanding +2
 
-    47..47  
+    47
+    47  
     Eyes of charming
 
-    48..48  
+    48
+    48  
     Robe of stars
 
-    49..49  
+    49
+    49  
     Carpet of flying, 10 ft. by 10 ft.
 
-    50..50  
+    50
+    50  
     Darkskull
 
-    51..51  
+    51
+    51  
     Cube of force
 
-    52..52  
+    52
+    52  
     Belt of physical perfection +4
 
-    53..53  
+    53
+    53  
     Bracers of armor +8
 
-    54..54  
+    54
+    54  
     Headband of mental superiority +4
 
-    55..55  
+    55
+    55  
     Pearl of power, 8th-level spell
 
-    56..56  
+    56
+    56  
     Crystal ball with telepathy
 
-    57..57  
+    57
+    57  
     Horn of blasting, greater
 
-    58..58  
+    58
+    58  
     Pearl of power, two spells
 
-    59..59  
+    59
+    59  
     Helm of teleportation
 
-    60..60  
+    60
+    60  
     Gem of seeing
 
-    61..61  
+    61
+    61  
     Robe of the archmagi
 
-    62..62  
+    62
+    62  
     Mantle of faith
 
-    63..63  
+    63
+    63  
     Amulet of mighty fists +4
 
-    64..64  
+    64
+    64  
     Crystal ball with true seeing
 
-    65..65  
+    65
+    65  
     Pearl of power, 9th level spell
 
-    66..66  
+    66
+    66  
     Well of many worlds
 
-    67..67  
+    67
+    67  
     Manual of bodily health +3
 
-    68..68  
+    68
+    68  
     Manual of gainful exercise +3
 
-    69..69  
+    69
+    69  
     Manual of quickness in action +3
 
-    70..70  
+    70
+    70  
     Tome of clear thought +3
 
-    71..71  
+    71
+    71  
     Tome of leadership and influence +3
 
-    72..72  
+    72
+    72  
     Tome of understanding +3
 
-    73..73  
+    73
+    73  
     Apparatus of the crab
 
-    74..74  
+    74
+    74  
     Belt of physical might +6
 
-    75..75  
+    75
+    75  
     Headband of mental prowess +6
 
-    76..76  
+    76
+    76  
     Mantle of spell resistance
 
-    77..77  
+    77
+    77  
     Mirror of opposition
 
-    78..78  
+    78
+    78  
     Strand of prayer beads, greater
 
-    79..79  
+    79
+    79  
     Manual of bodily health +4
 
-    80..80  
+    80
+    80  
     Manual of gainful exercise +4
 
-    81..81  
+    81
+    81  
     Manual of quickness in action +4
 
-    82..82  
+    82
+    82  
     Tome of clear thought +4
 
-    83..83  
+    83
+    83  
     Tome of leadership and influence +4
 
-    84..84  
+    84
+    84  
     Tome of understanding +4
 
-    85..85  
+    85
+    85  
     Amulet of th planes
 
-    86..86  
+    86
+    86  
     Robe of eyes
 
-    87..87  
+    87
+    87  
     Amulet of mighty fists +5
 
-    88..88  
+    88
+    88  
     Helm of brilliance
 
-    89..89  
+    89
+    89  
     Manual of bodily health +5
 
-    90..90  
+    90
+    90  
     Manual of gainful exercise +5
 
-    91..91  
+    91
+    91  
     Manual of quickness in action +5
 
-    92..92  
+    92
+    92  
     Tome of clear thought +5
 
-    93..93  
+    93
+    93  
     Tome of leadership and influence +5
 
-    94..94  
+    94
+    94  
     Tome of understanding +5
 
-    95..95  
+    95
+    95  
     Belt of physical perfection +6
 
-    96..96  
+    96
+    96  
     Headband of mental superiority +6
 
-    97..97  
+    97
+    97  
     Efreeti bottle
 
-    98..98  
+    98
+    98  
     Cubic gate
 
-    99..99  
+    99
+    99  
     Iron flask
 
-    100..100 
+    100
+    100 
     Mirror of life trapping

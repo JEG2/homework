@@ -1,300 +1,400 @@
 
-    1..1 
+    1
+    1 
     Amulet of natural armor +2
 
-    2..2 
+    2
+    2 
     Golem manual, flesh
 
-    3..3 
+    3
+    3 
     Hand of glory
 
-    4..4 
+    4
+    4 
     Ioun stone, deep red sphere
 
-    5..5 
+    5
+    5 
     Ioun stone, incandescent blue sphere
 
-    6..6 
+    6
+    6 
     Ioun stone, pale blue rhomboid
 
-    7..7 
+    7
+    7 
     Ioun stone, pink and green sphere
 
-    8..8 
+    8
+    8 
     Ioun stone, pink rhomboid
 
-    9..9 
+    9
+    9 
     Ioun stone, scarlet and blue sphere
 
-    10..10 
+    10
+    10 
     Deck of illusions
 
-    11..11 
+    11
+    11 
     Necklace of fireballs type VI
 
-    12..12 
+    12
+    12 
     Candle of invocation
 
-    13..13 
+    13
+    13 
     Robe of blending
 
-    14..14 
+    14
+    14 
     Bag of tricks, rust
 
-    15..15 
+    15
+    15 
     Necklace of fireballs type VII
 
-    16..16 
+    16
+    16 
     Bracers of armor +3
 
-    17..17 
+    17
+    17 
     Cloak of resistance +3
 
-    18..18 
+    18
+    18 
     Decanter of endless water
 
-    19..19 
+    19
+    19 
     Necklace of adaptation
 
-    20..20 
+    20
+    20 
     Pearl of power, 3rd-level spell
 
-    21..21 
+    21
+    21 
     Figurine of wondrous power, serpentine owl
 
-    22..22 
+    22
+    22 
     Strand of prayer beads, lesser
 
-    23..23 
+    23
+    23 
     Bag of holding type IV
 
-    24..24 
+    24
+    24 
     Belt of physical might +2
 
-    25..25 
+    25
+    25 
     Figurine of wondrous power, bronze griffon
 
-    26..26 
+    26
+    26 
     Figurine of wondrous power, ebony fly
 
-    27..27 
+    27
+    27 
     Gloves of storing
 
-    28..28 
+    28
+    28 
     Headband of mental prowess +2
 
-    29..29 
+    29
+    29 
     Ioun stone, dark blue rhomboid
 
-    30..30 
+    30
+    30 
     Cape of the mountebank
 
-    31..31 
+    31
+    31 
     Phylactery of negative channeling
 
-    32..32 
+    32
+    32 
     Phylactery of positive channeling
 
-    33..33 
+    33
+    33 
     Guantlet of rust
 
-    34..34 
+    34
+    34 
     Boots of speed
 
-    35..35 
+    35
+    35 
     Goggles of night
 
-    36..36 
+    36
+    36 
     Golem manuel, clay
 
-    37..37 
+    37
+    37 
     Medallion of thoughts
 
-    38..38 
+    38
+    38 
     Blessed book
 
-    39..39 
+    39
+    39 
     Gem of brightness
 
-    40..40 
+    40
+    40 
     Lyre of building
 
-    41..41 
+    41
+    41 
     Robe, Monk's
 
-    42..42 
+    42
+    42 
     Cloak of arachnida
 
-    43..43 
+    43
+    43 
     Belt of dwarvenkind
 
-    44..44 
+    44
+    44 
     Periapt of wound closure
 
-    45..45 
+    45
+    45 
     Pearl of the sirines
 
-    46..46 
+    46
+    46 
     Figurine of wondrous power, onyx dog
 
-    47..47 
+    47
+    47 
     Bag of tricks, tan
 
-    48..48 
+    48
+    48 
     Belt of giant strength +4
 
-    49..49 
+    49
+    49 
     Belt of incredible dexterity +4
 
-    50..50 
+    50
+    50 
     Belt of mighty constitution +4
 
-    51..51 
+    51
+    51 
     Belt of physical perfection +2
 
-    52..52 
+    52
+    52 
     Boots, winged
 
-    53..53 
+    53
+    53 
     Bracers of armor +4
 
-    54..54 
+    54
+    54 
     Cloak of resistance +4
 
-    55..55 
+    55
+    55 
     Headband of alluring charisma +4
 
-    56..56 
+    56
+    56 
     Headband of inspired wisdom +4
 
-    57..57 
+    57
+    57 
     Headband of mental superiority +2
 
-    58..58 
+    58
+    58 
     Headband of vast intelligence +4
 
-    59..59 
+    59
+    59 
     Pearl of power, 4th-level spell
 
-    60..60 
+    60
+    60 
     Scabbard of keen edges
 
-    61..61 
+    61
+    61 
     Figurine of wondrous power, golden lions
 
-    62..62 
+    62
+    62 
     Chime of interruption
 
-    63..63 
+    63
+    63 
     Broom of flying
 
-    64..64 
+    64
+    64 
     Figurie of wondrous power, marble elephant
 
-    65..65 
+    65
+    65 
     Amulet of natural armor +3
 
-    66..66 
+    66
+    66 
     Ioun stone, iridescent spindle
 
-    67..67 
+    67
+    67 
     Bracelet of friends
 
-    68..68 
+    68
+    68 
     Amulet of mighty fists +2
 
-    69..69 
+    69
+    69 
     Carpet of flying, 5 ft. by 5ft.
 
-    70..70 
+    70
+    70 
     Horn of blasting
 
-    71..71 
+    71
+    71 
     Ioun stone, pale lavender ellipsoid
 
-    72..72 
+    72
+    72 
     Ioun stone, pearly white spindle
 
-    73..73 
+    73
+    73 
     Portable hole
 
-    74..74 
+    74
+    74 
     Stone of good luck (luckstone)
 
-    75..75 
+    75
+    75 
     Figurine of wondrous power, ivory goats
 
-    76..76 
+    76
+    76 
     Rope of entanglement
 
-    77..77 
+    77
+    77 
     Golem manual, stone
 
-    78..78 
+    78
+    78 
     Mask of the skull
 
-    79..79 
+    79
+    79 
     Mattock of the titans
 
-    80..80 
+    80
+    80 
     Crown of blasting, major
 
-    81..81 
+    81
+    81 
     Cloak of displacement, minor
 
-    82..82 
+    82
+    82 
     Helm of underwater action
 
-    83..83 
+    83
+    83 
     Bracers of archery, greater
 
-    84..84 
+    84
+    84 
     Bracers of armor +5
 
-    85..85 
+    85
+    85 
     Cloak of resistance +5
 
-    86..86 
+    86
+    86 
     Eyes of doom
 
-    87..87 
+    87
+    87 
     Pearl of power, 5th-level spell
 
-    88..88 
+    88
+    88 
     Maul of the titans
 
-    89..89 
+    89
+    89 
     Cloak of the bat
 
-    90..90 
+    90
+    90 
     Iron bands of binding
 
-    91..91 
+    91
+    91 
     ube of frost resistance
 
-    92..92 
+    92
+    92 
     Helm of telepathy
 
-    93..93 
+    93
+    93 
     Periapt of proof against poison
 
-    94..94 
+    94
+    94 
     Robe of scintillating colors
 
-    95..95 
+    95
+    95 
     Manual of bodily health +1
 
-    96..96 
+    96
+    96 
     Manual of gainful exercise +1
 
-    97..97 
+    97
+    97 
     Manual of quickness in action +1
 
-    98..98 
+    98
+    98 
     Tome of clear thought +1
 
-    99..99 
+    99
+    99 
     Tome of leadership and influence +1
 
-    100..100 
+    100
+    100 
     Tome of understanding +1
