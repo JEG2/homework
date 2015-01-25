@@ -1,6 +1,6 @@
 class Table
   def initialize(rarity)
-    @rarity               = rarity
+    @rarity = rarity
   end
 
 
@@ -176,42 +176,23 @@ class Runner
   end
 end
 
-def set_selection(selection)
-  puts "Would you like to run the default or choose parameters?
-  default
-  parameters"
-  puts
-  puts "Choose:"
-  selection = gets.strip
-  if !["default", "parameters"].include?(selection)
+def ask_question(question, viable_answers)
+  puts question
+  puts viable_answers
+  answer = gets.strip
+  if !viable_answers.include?(answer)
     puts "Oops! Please try again."
-    set_selection(selection)
+    ask_question(question, viable_answers)
   end
-  return selection
+  return answer
 end
 
 def set_parameters(parameters)
-  puts "Please choose what category of tables you would like your magical item(s) to choose from:
-  minor
-  medium
-  major"
-  puts
   parameters = Array.new(4)
-  parameters[0] = gets.strip
-
-  if !["minor", "medium", "major"].include?(parameters[0])  
-    puts "Oops! Please try again."
-    set_parameters(parameters)
-  end
-  puts "Would you like to choose a range or choose a specific number of items?
-  range
-  number"
+  parameters[0] = ask_question("Please choose what category of tables you would like your magical items to choose from:", ["minor", "medium", "major"])
   puts
-  parameters[1] = gets.strip
-  if !["range", "number"].include?(parameters[1])
-    puts "Oops! Please try again."
-    set_parameters(parameters)
-  end
+  parameters[1] = ask_question("Would you like to choose a range or a specific number of items?", ["range", "number"])
+  puts
   if parameters[1] == "range"
     puts "Please choose the lower bound of your range."
     parameters[2] = gets.strip
@@ -224,12 +205,13 @@ def set_parameters(parameters)
   return parameters
 end
 
-selection = set_selection(selection)
+selection = ask_question("Would you like to run the default or choose parameters?", ["default", "parameters"])
+puts
 if selection == "default"
   option = "random" 
-  run_minor   = Runner.new(3..12, minor).build_items(option)
-  run_medium  = Runner.new(2..8, medium).build_items(option)
-  run_major   = Runner.new(1..4, major).build_items(option)
+  Runner.new(3..12, minor).build_items(option)
+  Runner.new(2..8, medium).build_items(option)
+  Runner.new(1..4, major).build_items(option)
 else
   parameters = set_parameters(parameters)
   if parameters[1] == "range"
@@ -238,21 +220,21 @@ else
     upper_bound = parameters[3].to_i
     case parameters[0]
     when "minor"
-      run_program = Runner.new(lower_bound..upper_bound, minor).build_items(option)
+      Runner.new(lower_bound..upper_bound, minor).build_items(option)
     when "medium"
-      run_program = Runner.new(lower_bound..upper_bound, medium).build_items(option)
+      Runner.new(lower_bound..upper_bound, medium).build_items(option)
     when "major"
-      run_program = Runner.new(lower_bound..upper_bound, major).build_items(option)
+      Runner.new(lower_bound..upper_bound, major).build_items(option)
     end
   else
     option = "fixed"
     case parameters[0]
     when "minor"
-      run_program = Runner.new(parameters[2].to_i, minor).build_items(option)
+      Runner.new(parameters[2].to_i, minor).build_items(option)
     when "medium"
-      run_program = Runner.new(parameters[2].to_i, medium).build_items(option)
+      Runner.new(parameters[2].to_i, medium).build_items(option)
     when "major"
-      run_program = Runner.new(parameters[2].to_i, major).build_items(option)
+      Runner.new(parameters[2].to_i, major).build_items(option)
     end
   end
 end

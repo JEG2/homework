@@ -1,0 +1,7 @@
+
+charisma
+intelligence
+constitution
+dexterity
+wisdom
+strength
