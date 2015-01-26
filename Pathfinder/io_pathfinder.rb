@@ -188,19 +188,19 @@ def ask_question(question, viable_answers)
 end
 
 def set_parameters(parameters)
-  parameters = Array.new(4)
-  parameters[0] = ask_question("Please choose what category of tables you would like your magical items to choose from:", ["minor", "medium", "major"])
+  parameters = Hash.new
+  parameters["rarity"] = ask_question("Please choose what category of tables you would like your magical items to choose from:", ["minor", "medium", "major"])
   puts
-  parameters[1] = ask_question("Would you like to choose a range or a specific number of items?", ["range", "number"])
+  parameters["type"] = ask_question("Would you like to choose a range or a specific number of items?", ["range", "number"])
   puts
-  if parameters[1] == "range"
+  if parameters["type"] == "range"
     puts "Please choose the lower bound of your range."
-    parameters[2] = gets.strip
+    parameters["lower_bound"] = gets.strip
     puts "Please choose the upper bound of your range."
-    parameters[3] = gets.strip
+    parameters["upper_bound"] = gets.strip
   else
     puts "Please choose the number of items you'd like to generate."
-    parameters[2] = gets.strip
+    parameters["number"] = gets.strip
   end
   return parameters
 end
@@ -214,11 +214,11 @@ if selection == "default"
   Runner.new(1..4, major).build_items(option)
 else
   parameters = set_parameters(parameters)
-  if parameters[1] == "range"
+  if parameters["type"] == "range"
     option = "random"
-    lower_bound = parameters[2].to_i
-    upper_bound = parameters[3].to_i
-    case parameters[0]
+    lower_bound = parameters["lower_bound"].to_i
+    upper_bound = parameters["upper_bound"].to_i
+    case parameters["rarity"]
     when "minor"
       Runner.new(lower_bound..upper_bound, minor).build_items(option)
     when "medium"
@@ -228,13 +228,13 @@ else
     end
   else
     option = "fixed"
-    case parameters[0]
+    case parameters["rarity"]
     when "minor"
-      Runner.new(parameters[2].to_i, minor).build_items(option)
+      Runner.new(parameters["number"].to_i, minor).build_items(option)
     when "medium"
-      Runner.new(parameters[2].to_i, medium).build_items(option)
+      Runner.new(parameters["number"].to_i, medium).build_items(option)
     when "major"
-      Runner.new(parameters[2].to_i, major).build_items(option)
+      Runner.new(parameters["number"].to_i, major).build_items(option)
     end
   end
 end
