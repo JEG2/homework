@@ -18,7 +18,7 @@ class Table
   def run
     hash = Hash.new
     hash[nil]                       = build("table")
-    hash["Armor and shields"]       = build("armorandshields")
+    hash["Armor and Shields"]       = build("armorandshields")
     hash["Special armor"]           = build("specialarmor")
     hash["Special shield"]          = build("specialshield")
     hash["Specific armor"]          = build("specificarmor")
