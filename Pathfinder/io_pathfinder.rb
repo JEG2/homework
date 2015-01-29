@@ -76,103 +76,49 @@ class Runner
     else
       count = @count
     end
+    table = nil
+    armor_marker = "no"
+    shield_marker = "no"
+    coin_flip = roll_die(2)
     while cycles < count
-      build_item
+      build_item(table, armor_marker, shield_marker, coin_flip)
       cycles = cycles + 1
     end
   end
 
-  def build_item
-    choice  = choose_from_table(@tables[nil])
-    puts "The category is #{choice}."
-    item    = choose_from_table(@tables[choice])
-    puts "The item is #{item}"
-
-    case item
-    when "Specific armor"
-      build_specific_armor
-    when "Specific shield"
-      build_specific_shield
-    when "Special ability and roll again"
-      build_special_armor_ability
-    when "Specific weapon"
-      build_specific_weapon
-    when "Special weapon ability and roll again"
-      build_special_weapon_ability
-    when "Wonder"
-      build_rod
+  def build_item(table, armor_marker, shield_marker, coin_flip)
+    while @tables.include?(table)
+      choice = choose_from_table(@tables[table])
+      if choice.include?("armor")
+        armor_marker = "yes"
+      end
+      if choice.include?("shield")
+        shield_marker = "yes"
+      end
+      puts choice
+      if choice.include?("Roll again twice")
+        2.times do
+          build_item(table, armor_marker, shield_marker, coin_flip)
+        end
+      elsif choice.include?("weapon ability")
+        if coin_flip == 1
+          spec = "Special melee weapon"
+        else
+          spec = "Special ranged weapon"
+        end
+        build_item(spec, armor_marker, shield_marker, coin_flip)
+        build_item(table, armor_marker, shield_marker, coin_flip)
+      elsif choice.include?("Special ability")
+        build_item(table, armor_marker, shield_marker, coin_flip)
+        if armor_marker == "yes"
+          build_item("Special armor", armor_marker, shield_marker, coin_flip)
+        elsif shield_marker == "yes"
+          build_item("Special shield", armor_marker, shield_marker, coin_flip)
+        end
+      end
+      table = choice
     end
     puts
-  end
-
-  def build_specific_armor
-    puts choose_from_table(@tables["Specific armor"])
-  end
-
-  def build_specific_shield
-    puts choose_from_table(@tables["Specific shield"])
-  end
-  
-  def build_special_armor_ability
-    armor = choose_from_table(@tables["Armor and shields"])
-    puts armor
-    if armor.include?("armor")
-      spec = "Special armor"
-    else 
-      spec = "Special shield"
-    end
-    case armor
-    when "Special ability and roll again"
-      build_special_armor_ability
-    when "Specific shield"
-      build_specific_shield
-    when "Specific armor"
-      build_specific_armor
-    end
-    armor = choose_from_table(@tables[spec])
-    puts armor
-    if armor == "Roll again twice"
-      puts choose_from_table(@tables[spec])
-      puts choose_from_table(@tables[spec])
-    end
-  end
-
-  def build_specific_weapon
-    weapon = choose_from_table(@tables["Specific weapon"])
-    if weapon == "Slaying arrow"
-      puts choose_from_table(@tables["Slaying arrow"])
-    end
-    puts weapon
-  end
-
-  def build_special_weapon_ability
-    weapon = choose_from_table(@tables["Weapons"])
-    puts weapon
-    coin_flip = roll_die(2)
-    if coin_flip == 1
-      spec = "Special melee weapon"
-    else
-      spec = "Special ranged weapon"
-    end
-    case weapon
-    when "Special weapon ability and roll again"
-      build_special_weapon_ability
-    when "Specific weapon"
-      build_specific_weapon
-    end
-    weapon = choose_from_table(@tables[spec])
-    puts weapon
-    case weapon
-    when "Bane"
-      puts choose_from_table(@tables["Bane"])
-    when "Roll again twice"
-      puts choose_from_table(@tables[spec])
-      puts choose_from_table(@tables[spec])
-    end
-  end
-
-  def build_rod
-    puts choose_from_table(@tables["Wonder"])
   end
 end
 
@@ -205,6 +151,8 @@ def set_parameters(parameters)
   return parameters
 end
 
+armor_marker = "no"
+shield_marker = "no"
 selection = ask_question("Would you like to run the default or choose parameters?", ["default", "parameters"])
 puts
 if selection == "default"
