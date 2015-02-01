@@ -1,0 +1,5 @@
+Is it a category of animals? (As opposed to a particular species?)
+Is it large?
+Is it small?
+Does it bark?
+Does it like catnip?

@@ -1,0 +1,20 @@
+Is it a category of animal? (As opposed to a particular species.)
+elephant
+Is it a category of animal? (As opposed to a particular species.)
+rabbit
+Is it a category of animal? (As opposed to a particular species.)
+mouse
+Is it a category of animal? (As opposed to a particular species.)
+dog
+Is it a category of animal? (As opposed to a particular species.)
+cat
+Is it large?
+elephant
+Is it small?
+rabbit
+Is it small?
+mouse
+Does it bark?
+dog
+Does it like catnip?
+cat
