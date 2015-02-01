@@ -253,7 +253,7 @@
 
     64
     64 
-    Figurie of wondrous power, marble elephant
+    Figurine of wondrous power, marble elephant
 
     65
     65 
@@ -361,7 +361,7 @@
 
     91
     91 
-    ube of frost resistance
+    Cube of frost resistance
 
     92
     92 
