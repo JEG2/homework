@@ -24,14 +24,41 @@ table = table.run
 
 p table
 
-animals = Hash.new
+master_tables = Hash.new
 table.keys.each do |file|
   table["questions"].each do |question|
     if question.include?(file)
-      animals[question] = table[file]
+      master_tables[question] = table[file]
     end
   end
 end
 
+p master_tables
+animals = Builder.new
+animals = animals.pull("animal")
 p animals
+
+puts "Think of an animal."
+puts "Please answer all questions with 'yes' or 'no'."
+puts "Is your animal a category, such as horse, cat, mouse? (As opposed to a particular breed or species)"
+category = gets.strip
+if category == "yes"
+  animals.delete_if { |animal| !table["category"].include?(animal) }
+  p animals
+elsif category == "no"
+  puts "Is it a breed?"
+  breed = gets.strip
+  if breed == "yes"
+    animals.delete_if { |animal| !table["breed"].include?(animal) }
+    p animals
+  elsif breed == "no"
+    animals.delete_if { |animal| ! table["species"].include?(animal) }
+    p animals
+  else
+    puts "Oops! I didn't understand your response. Please start again."
+  end
+else
+  puts "Oops! I didn't understand your response. Please start again."
+end
+
 
