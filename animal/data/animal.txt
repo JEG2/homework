@@ -5,3 +5,4 @@ dog
 cat
 shih-tzu
 cane toad
+horse

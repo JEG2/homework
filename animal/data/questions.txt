@@ -1,6 +1,21 @@
+
 Is it large?
+file5
+
 Is it small?
+file6
+
 Does it bark?
+file1
+
 Does it like catnip?
+file3
+
 Does it like carrots?
+file2
+
 Does it like cheese?
+file4
+
+Does it wear a saddle?
+file92983

@@ -3,3 +3,4 @@ rabbit
 mouse
 dog
 cat
+horse

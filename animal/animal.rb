@@ -8,26 +8,58 @@ class Builder
   end
   return array
   end
-  
+
+  def build_questions
+    array  = Array.new
+    File.open("data/questions.txt", "r") do |f|
+      while (line = f.gets)
+        array << f.gets.strip
+        f.gets.strip
+      end
+    end
+    return array
+  end
+
+  def tag_questions(table)
+    array     = Array.new
+    hash      = Hash.new
+    questions = build_questions
+    File.open("data/questions.txt", "r") do |f|
+      while (line = f.gets)
+        f.gets.strip
+        array << f.gets.strip
+      end
+    end
+    questions.each do |question|
+      hash[question] = table[array[questions.index(question)]]
+    end
+    return hash
+  end
+
+  def compare
+    array     = Array.new
+    hash      = Hash.new
+    questions = build_questions
+    File.open("data/questions.txt", "r") do |f|
+      while (line = f.gets)
+        f.gets.strip
+        array << f.gets.strip
+      end
+    end
+    questions.each do |question|
+      hash[question] = array[questions.index(question)]
+    end
+    return hash
+  end
+
   def run
     array = pull("directory")
     hash = Hash.new
     array.each do |key|
       hash[key] = pull(key)
     end
+    hash["questions"] = build_questions
     return hash
-  end
-end
-
-table = Builder.new
-table = table.run
-
-master_tables = Hash.new
-table.keys.each do |file|
-  table["questions"].each do |question|
-    if question.include?(file)
-      master_tables[question] = table[file]
-    end
   end
 end
 
@@ -41,71 +73,112 @@ def no(animals, master_tables, question)
   return animals
 end
 
-p master_tables
+def question_loop(animals, master_tables, table, answer_tracking)
+    while animals.size > 1
+      question = table["questions"].sample
+      p question
+      table["questions"].delete(question)
+      answer = gets.strip
+      answer_tracking[question] = answer
+      if answer == "yes"
+        animals = yes(animals, master_tables, question)
+      elsif answer == "no"
+        animals = no(animals, master_tables, question)
+      else
+        puts "Oops! I didn't understand your response. Please start again."
+        exit
+      end
+    end
+    puts "Is your animal a(n) #{animals.last}?"
+    return answer_tracking
+end
 
-animals = Builder.new
-animals = animals.pull("animal")
+def oops
+  puts "Oops! I didn't understand your response. Please start again."
+  exit
+end
 
+def send_questions_data(help)
+  file_name = "file#{rand(1..99999)}"
+  File.open("data/questions.txt", "a") do |f|
+    f.puts
+    f.puts help["question"]
+    while File.exist?("data/#{file_name}")
+      file_name = "file#{rand(1..99999)}"
+    end
+    f.puts file_name
+  end
+  return file_name
+end
+
+animals         = Builder.new
+animals         = animals.pull("animal")
+table           = Builder.new
+table           = table.run
+master_tables   = Builder.new
+master_tables   = master_tables.tag_questions(table)
+
+answer_tracking = Hash.new
 puts "Think of an animal."
 puts "Please answer all questions with 'yes' or 'no'."
 puts "Is your animal a category, such as horse, cat, mouse? (As opposed to a particular breed or species)"
 category = gets.strip
 if category == "yes"
+  answer_tracking["category"] = category
   animals.delete_if { |animal| !table["category"].include?(animal) }
-  puts animals
-  question = table["questions"].sample
-  p question
-  table["questions"].delete(question)
-  answer = gets.strip
-  if answer == "yes"
-    animals = yes(animals, master_tables, question)
-    while animals.size > 1
-      question = table["questions"].sample
-      p question
-      table["questions"].delete(question)
-      answer = gets.strip
-      if answer == "yes"
-        animals = yes(animals, master_tables, question)
-      elsif answer == "no"
-        animals = no(animals, master_tables, question)
-      else
-        puts "Oops! I didn't understand your response. Please start again."
-      end
-    end
-    puts animals
-  elsif answer == "no"
-    animals = no(animals, master_tables, question)
-    while animals.size > 1
-      question = table["questions"].sample
-      p question
-      table["questions"].delete(question)
-      answer = gets.strip
-      if answer == "yes"
-        animals = yes(animals, master_tables, question)
-      elsif answer == "no"
-        animals = no(animals, master_tables, question)
-      else
-        puts "Oops! I didn't understand your response. Please start again."
-      end
-    end
-    puts animals
-  else
-    puts "Oops! I didn't understand your response. Please start again."
-  end
+  p animals
+  answer_tracking = question_loop(animals, master_tables, table, answer_tracking)
 elsif category == "no"
+  answer_tracking["category"] = category
   puts "Is it a breed?"
   breed = gets.strip
   if breed == "yes"
+    answer_tracking["breed"] = breed
     animals.delete_if { |animal| !table["breed"].include?(animal) }
-    puts animals
+    answer_tracking = question_loop(animals, master_tables, table, answer_tracking)
   elsif breed == "no"
+    answer_tracking["breed"] = breed
     animals.delete_if { |animal| ! table["species"].include?(animal) }
-    puts animals
+    answer_tracking = question_loop(animals, master_tables, table, answer_tracking)
   else
-    puts "Oops! I didn't understand your response. Please start again."
+    oops
   end
 else
-  puts "Oops! I didn't understand your response. Please start again."
+  oops
 end
-
-
+answer = gets.strip
+if answer == "yes"
+  puts "Sweet. Thanks for playing."
+elsif answer == "no"
+  puts "Aw, <expletive deleted>. How about you help me out so I can get smarter. It'll only take a minute."
+  help = Hash.new
+  puts "What kind of animal where you thinking of?"
+  animal = gets.strip
+  help["animal"] = animal
+  puts "Please type a question that has a 'yes' or 'no' answer that might help distinguish your animal from the one I guessed."
+  question = gets.strip
+  help["question"] = question
+  puts "Thanks for playing."
+  p answer_tracking
+  file_name = send_questions_data(help)
+  check_locations = Builder.new
+  check_locations = check_locations.compare
+  if answer_tracking["category"] == "yes"
+    File.open("data/category.txt", "a") { |f| f.puts help["animal"] }
+  elsif
+    answer_tracking["breed"] == "yes"
+    File.open("data/breed.txt", "a") { |f| f.puts help["animal"] }
+  else
+    File.open("data/species.txt", "a") { |f| f.puts help["animal"] }
+  end
+  answer_tracking.each do |question, answer|
+    if answer == "yes"
+      File.open("data/#{check_locations[question]}.txt", "a") { |f| f.puts help["animal"] }
+    end
+  end
+  File.open("data/animal.txt", "a") { |f| f.puts help["animal"] }
+  File.open("data/directory.txt", "a") { |f| f.puts file_name }
+  File.open("data/#{file_name}.txt", "a") { |f| f.puts help["animal"] }
+else
+  oops
+end
