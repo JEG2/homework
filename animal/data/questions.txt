@@ -19,3 +19,9 @@ file4
 
 Does it wear a saddle?
 file92983
+
+Does your animal look like Snoopy?
+file59157
+
+Does it have spots?
+file78064

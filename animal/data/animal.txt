@@ -6,3 +6,5 @@ cat
 shih-tzu
 cane toad
 horse
+beagle
+giraffe
