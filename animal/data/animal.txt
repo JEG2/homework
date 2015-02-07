@@ -8,3 +8,8 @@ cane toad
 horse
 beagle
 giraffe
+monkey
+gorilla
+aardvark
+bird
+prairie dog

@@ -25,3 +25,18 @@ file59157
 
 Does it have spots?
 file78064
+
+Does it like bananas?
+monkey
+
+Does your animal live in the forest?
+gorilla
+
+Does your animal have a long nose?
+aardvark
+
+Can your animal fly?
+bird
+
+Does your animal live underground?
+prairie dog

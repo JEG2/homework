@@ -4,3 +4,5 @@ mouse
 dog
 cat
 horse
+monkey
+bird
