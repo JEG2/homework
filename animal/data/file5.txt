@@ -1,2 +1,4 @@
 elephant
 horse
+dinosaur
+cow

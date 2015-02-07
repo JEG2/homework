@@ -13,3 +13,16 @@ gorilla
 aardvark
 bird
 prairie dog
+fish
+carp
+naked mole-rat
+dinosaur
+kangaroo
+dalmatian
+cow
+bald eagle
+siamese cat
+blue whale
+bat
+opossum
+bobwhite quail

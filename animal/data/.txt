@@ -3,3 +3,9 @@ horse
 Beagle
 monkey
 bird
+fish
+dinosaur
+dalmatian
+cow
+siamese cat
+bat

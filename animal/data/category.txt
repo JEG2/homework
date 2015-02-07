@@ -6,3 +6,7 @@ cat
 horse
 monkey
 bird
+fish
+dinosaur
+cow
+bat

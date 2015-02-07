@@ -173,7 +173,7 @@ class Runner
       puts "What kind of animal where you thinking of?"
       animal = gets.strip
       response["animal"] = animal
-      puts "Please type a question that has a 'yes' or 'no' answer that might help distinguish your animal from the one I guessed."
+      puts "Please type a question that has a 'yes' answer that might help distinguish your animal from the one I guessed."
       question = gets.strip
       response["question"] = question
       puts "Thanks for playing."

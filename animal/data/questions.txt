@@ -40,3 +40,42 @@ bird
 
 Does your animal live underground?
 prairie dog
+
+Does your animal live in water?
+fish
+
+Does your animal live in ponds?
+carp
+
+Is your animal a eusocial?
+naked mole-rat
+
+Is it extinct?
+dinosaur
+
+Does it have a pouch?
+kangaroo
+
+Does your animal have spots?
+dalmatian
+
+Do people make hamburgers out of your animal?
+cow
+
+Does your animal fly?
+bald eagle
+
+Is your animal from Siam?
+siamese cat
+
+Is your animal very large?
+blue whale
+
+Is your animal nocturnal?
+bat
+
+Is your animal nocturnal?
+opossum
+
+Is your animal a game bird?
+bobwhite quail
