@@ -16,14 +16,6 @@ class Table
   end
 end
 
-relationships = Table.new("relationships").run
-
-needs         = Table.new("needs").run
-
-objects       = Table.new("objects").run
-
-locations     = Table.new("locations").run
-
 class Runner
   def initialize(relationships, needs, locations, objects)
     @relationships  = relationships
@@ -49,7 +41,10 @@ class Runner
       puts
     end
   end
-
 end
 
+relationships = Table.new("relationships").run
+needs         = Table.new("needs").run
+objects       = Table.new("objects").run
+locations     = Table.new("locations").run
 Runner.new(relationships, needs, locations, objects).run

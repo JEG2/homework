@@ -1,11 +1,11 @@
 class Builder
   def pull(key)
-  array = Array.new
-  File.open("data/#{key}.txt", "r") do |f|
-    while (line = f.gets)
-      array << line.strip
+    array = Array.new
+    File.open("data/#{key}.txt", "r") do |f|
+      while (line = f.gets)
+        array << line.strip
+      end
     end
-  end
   return array
   end
 
@@ -206,9 +206,10 @@ end
 
 animals         = Builder.new
 animals         = animals.pull("animal")
-master_list     = animals
+master_list     = animals.dup
 table           = Builder.new
 table           = table.run
+p table
 master_tables   = Builder.new
 master_tables   = master_tables.tag_questions(table)
 guess           = Runner.new(animals, master_list, table, master_tables)
